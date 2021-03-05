@@ -1,0 +1,19 @@
+.jumbotron  {
+    background-color: purple;
+    position: relative ;
+
+}
+
+.giantContainer{
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+/* jumbotron submit button to right of form */
+/*Some type of purple for jumbo
+/* decent bg contrast(possibly light grey)
+/* after content is put in, add additional style "hoover, transitions, transforms"
+/* rounded corners for main div, inner boxed not rounded for look?
+/* Better fonts from fontwhatever it was, or google fonts in bootstrap
+
