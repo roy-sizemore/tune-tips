@@ -1,2 +1,2 @@
-# tune-tips
+# TuneTips
 Project TuneTips: OSU Bootcamp Project 1
