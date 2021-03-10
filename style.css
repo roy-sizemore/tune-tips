@@ -14,7 +14,7 @@ body{
     margin-bottom: 1.75em;
 }
 .container-s{
-    width: 33%;
+    width: 40%;
     flex: 3;
     background-color:lightgray;
     padding: 50px;
@@ -88,6 +88,7 @@ button{
       font-style: oblique;
       font-size: 10px;
       box-shadow: 20px 20px 30px;
+  }
 
 
 /* For desktop: */
