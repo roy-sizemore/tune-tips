@@ -63,7 +63,7 @@ $(document).ready(() => {
 
 
 /* How to add an id to a jQuery statement:
-const sampleStatement = $('<div>').attr('id', 'id').addClass('first-class second-class');
+const sampleStatement = $('<div>').attr('id', 'id-name').addClass('first-class second-class');
 
 If the variable has already been declared:
 sampleStatement.attr('id', 'first-id second-id').addClass('first-class second-class);
