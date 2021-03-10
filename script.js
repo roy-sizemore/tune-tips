@@ -12,14 +12,15 @@ $(document).ready(() => {
     // Retrieve artist info and top 10 tracks 
     const getArtist = () => {
 
-        const $topTracks = $('<textarea readonly>').attr('id', 'h2').addClass('h2 text-capitalize').text(`Top 10 Tracks for:\n${$searchInput.val()}`);
-        const $artistInfo = $('<textarea readonly>').attr('id', 'h2').addClass('h2 text-capitalize').text(`Info about:\n${$searchInput.val()}`);
+        const $topTracks = $('<h2>').addClass('h2 text-capitalize search-input').text(`Top 10 Tracks for: ${$searchInput.val()}`);
+        const $artistInfo = $('<h3>').addClass('h2 text-capitalize search-input').text(`Info about: ${$searchInput.val()}`);
         const $contain2 = $('<div>').addClass('container container-fluid d-flex flex-row p-5');
         const $trackDiv = $('<div>').addClass('container-s col-4 p-5');
         const $olTrack = $('<ol>');
         const $infoDiv = $('<div>').addClass('container-s col-4 p-5');
         $infoDiv.append($artistInfo);
-        $trackDiv.append($topTracks, $olTrack);
+        $trackDiv.append($topTracks);
+        $trackDiv.append($olTrack);
         $contain2.append($infoDiv, $trackDiv);
         $('body').append($contain2);
 
@@ -50,7 +51,6 @@ $(document).ready(() => {
         //         console.log(JSON.stringify(response));
         //     }
         // });
-        $searchInput.val('');
     };
 
     // Button and Enter key functionality
