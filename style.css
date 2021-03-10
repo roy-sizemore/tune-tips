@@ -12,6 +12,7 @@ body {
     text-align: center;
     margin-bottom: 1.75em;
 }
+
 .container-s {
     width: 33%;
     flex: 3;
@@ -44,7 +45,7 @@ body {
 
  .form-control {
     align-content: center;
- }
+}
 
 #jumbo h1 {
     color:lightcyan;
