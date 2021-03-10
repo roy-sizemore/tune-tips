@@ -35,27 +35,24 @@ $(document).ready(() => {
                     $trackDiv.append($zeroText);
                 } else {
                     for (i = 0; i < data.track.length; i++) {
-                        console.log(data.track[i].strTrack);
                         $olTrack.append($('<li>').text(data.track[i].strTrack));
                     };
                 };
             },
         });
 
-        // Artist Info API
-        // $.ajax({
-        //     // Retrieves artist information
-        //     url: `https://artist-info.p.rapidapi.com/getArtistInfo?Kostas=${$searchInput.val()}`,
-        //     method: "GET",
-        //     headers: {
-        //         "x-rapidapi-key": "3d0129d893msh65e57270d365ab7p1d1e20jsn134535a62282",
-        //         "x-rapidapi-host": "artist-info.p.rapidapi.com"
-        //     },
-        //     success: (response) => {
-        //         console.log(JSON.stringify(response));
-        //     }
-        // });
+        // last.fm API
+        $.ajax({
+            // Retrieves artist information
+            url: `http://ws.audioscrobbler.com/2.0//2.0/?method=artist.getinfo&artist=${$searchInput.val()}&api_key=c8fa358f2006de3b95aa7bf6026a6017&format=json`,
+            method: "GET",
+            success: (response) => {
+                console.log(response);
+            }
+        });
     };
+
+    const footer = () => {moment().format('YYYY')};
 
     // Button and Enter key functionality
     $btn.on('click', getArtist);
