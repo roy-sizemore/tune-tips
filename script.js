@@ -30,10 +30,16 @@ $(document).ready(() => {
             url: `https://theaudiodb.com/api/v1/json/523532/track-top10.php?s=${$searchInput.val()}`,
             method: 'GET',
             success: (data) => {
-                for (i = 0; i < data.track.length; i++) {
-                    console.log(data.track[i].strTrack);
-                    let li = $('<li>').text(data.track[i].strTrack);
-                    $olTrack.append(li);
+                if (data.track.length === 0) {
+                    $trackDiv.remove($olTrack);
+                    const $zeroText = $('<p>').text("Ain't no luv for this artist, man.");
+                    $trackDiv.append($zeroText);
+                } else {
+                    for (i = 0; i < data.track.length; i++) {
+                        console.log(data.track[i].strTrack);
+                        let li = $('<li>').text(data.track[i].strTrack);
+                        $olTrack.append(li);
+                    };
                 };
             },
         });
