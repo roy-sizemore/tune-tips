@@ -47,3 +47,14 @@ const getArtist = () => {
     });
 };
 
+$btn.on('click', () => {getWeather()});
+$searchInput.on('keypress', (e) => {
+  if (e.which === 13) {
+    getWeather();
+  };
+});
+
+$searchCol.on('click', '.searchHist', () => {
+  $searchInput.val($(this).text());
+  getWeather();
+});
