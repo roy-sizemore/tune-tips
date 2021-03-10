@@ -32,7 +32,6 @@ body{
 .jumbotron  {
     background-image: url("Music-visualizer-tune-tips.jpg");
     background-position: center; 
-    background-position:;  
     image-rendering: optimizeQuality;
     font-size: 2em;
     font-style: oblique;
@@ -70,25 +69,25 @@ button{
     float:right;
     margin-top: -38px;
 }
-.btn hover:{
+.btn :hover{
     color:blueviolet; 
 }
 
-  footer{
-      border-style: double;
-      padding-bottom:px;
-      font-size: 2px;
-      margin-top: 150px;
-      /* margin-left: 700px;
-      margin-right: 700px; */
-      /* margin-bottom: 300px; */
-      border-radius: 20px;
-      background-color: lightgray;
-      text-align: center;
-      font-style: oblique;
-      font-size: 10px;
-      box-shadow: 20px 20px 30px;
-
+footer{
+    border-style: double;
+    padding-bottom:px;
+    font-size: 2px;
+    margin-top: 150px;
+    /* margin-left: 700px;
+    margin-right: 700px; */
+    /* margin-bottom: 300px; */
+    border-radius: 20px;
+    background-color: lightgray;
+    text-align: center;
+    font-style: oblique;
+    font-size: 10px;
+    box-shadow: 20px 20px 30px;
+}
 
 /* For desktop: */
 .col-1 {width: 8.33%;}
