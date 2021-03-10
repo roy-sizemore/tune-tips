@@ -78,9 +78,6 @@ footer{
     padding-bottom:px;
     font-size: 2px;
     margin-top: 150px;
-    /* margin-left: 700px;
-    margin-right: 700px; */
-    /* margin-bottom: 300px; */
     border-radius: 20px;
     background-color: lightgray;
     text-align: center;
@@ -110,11 +107,6 @@ footer{
   }
 }
 
-
-  /* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
-  }
   
   @media only screen and (min-width: 700px) {
     /* For desktop: */
@@ -131,63 +123,3 @@ footer{
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
   }
-/* jumbotron submit button to right of form */
-/*Some type of purple for jumbo
-/* decent bg contrast(possibly light grey)
-/* after content is put in, add additional style "hoover, transitions, transforms"
-/* rounded corners for main div, inner boxed not rounded for look?
-/* Better fonts from fontwhatever it was, or google fonts in bootstrap
-
-
-
-/* #topTenTracks {
-    flex: 3;
-    background-color:lightgray;
-    padding: 50px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    text-align:start;
-    border-style:ridge;
-    border-color: indigo;
-    height: 400px;
-    border-radius: 37px;
-    transform: rotate(6deg);
-    box-shadow: 20px 30px 20px;
-
-}
-  #topFiveAlbums {
-    flex: 3;
-    background-color:lightgray;
-    padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    text-align:start;
-    border-style: ridge;
-    border-color: indigo;
-    height: 400px;
-    border-radius: 37px;
-    transform: rotate(6deg);
-    box-shadow: 20px 30px 20px;
-  
-
-  }
-  #relatedArtists {
-    flex: 3;
-    background-color:lightgray;
-    padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    text-align:start;
-    border-style: ridge;
-    border-color: indigo;
-    height: 400px;
-    border-radius: 37px;
-    transform: rotate(6deg);
-    box-shadow: 20px 30px 20px;
-   
-  } */
