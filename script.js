@@ -12,15 +12,14 @@ $(document).ready(() => {
     // Retrieve artist info and top 10 tracks 
     const getArtist = () => {
 
-        const $topTracks = $('<h2>').addClass('h2 text-capitalize search-input').text(`Top 10 Tracks for: ${$searchInput.val()}`);
+        const $topTracks = $('<h2>').addClass('h2 text-capitalize search-input').text(`Top Tracks for: ${$searchInput.val()}`);
         const $artistInfo = $('<h3>').addClass('h2 text-capitalize search-input').text(`Info about: ${$searchInput.val()}`);
-        const $contain2 = $('<div>').addClass('container container-fluid d-flex flex-row p-5');
-        const $trackDiv = $('<div>').addClass('container-s col-4 p-5');
+        const $contain2 = $('<div>').addClass('container container-fluid d-flex flex-row p-5 m-5');
+        const $trackDiv = $('<div>').addClass('container-s col-4 flex-column p-5 m-5');
         const $olTrack = $('<ol>');
-        const $infoDiv = $('<div>').addClass('container-s col-4 p-5');
+        const $infoDiv = $('<div>').addClass('container-s col-4 p-5 m-5');
         $infoDiv.append($artistInfo);
-        $trackDiv.append($topTracks);
-        $trackDiv.append($olTrack);
+        $trackDiv.append($topTracks, $olTrack);
         $contain2.append($infoDiv, $trackDiv);
         $('body').append($contain2);
 
@@ -37,8 +36,7 @@ $(document).ready(() => {
                 } else {
                     for (i = 0; i < data.track.length; i++) {
                         console.log(data.track[i].strTrack);
-                        let li = $('<li>').text(data.track[i].strTrack);
-                        $olTrack.append(li);
+                        $olTrack.append($('<li>').text(data.track[i].strTrack));
                     };
                 };
             },
