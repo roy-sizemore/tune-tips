@@ -12,8 +12,8 @@ $(document).ready(() => {
     // Retrieve artist info and top 10 tracks 
     const getArtist = () => {
 
-        const $topTracks = $('<h2>').addClass('h2 text-capitalize search-input').text(`Top Tracks for: ${$searchInput.val()}`);
-        const $artistInfo = $('<h3>').addClass('h2 text-capitalize search-input').text(`Info about: ${$searchInput.val()}`);
+        const $topTracks = $('<h2>').addClass('text-capitalize search-input').text(`Top Tracks for: ${$searchInput.val()}`);
+        const $artistInfo = $('<h2>').addClass('text-capitalize search-input').text(`Info about: ${$searchInput.val()}`);
         const $contain2 = $('<div>').addClass('container container-fluid d-flex flex-row p-5 m-5');
         const $trackDiv = $('<div>').addClass('container-s col-4 flex-column p-5 m-5');
         const $olTrack = $('<ol>');
@@ -68,3 +68,4 @@ const sampleStatement = $('<div>').attr('id', 'id').addClass('first-class second
 If the variable has already been declared:
 sampleStatement.attr('id', 'first-id second-id').addClass('first-class second-class);
 */
+
