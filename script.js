@@ -8,14 +8,14 @@ $contain1.append($searchInput, $btn);
 $jumboDiv.append($h1, $contain1);
 $('body').append($jumboDiv);
 
-const showArtist = () => {
-    $artist.addClass('text-capitalize').text($searchInput.val());
-    $('body').append($artist);
-};
+// const showArtist = () => {
+//     $artist.addClass('text-capitalize').text($searchInput.val());
+//     $('body').append($artist);
+// };
 
 const getArtist = () => {
     // AudioDB API
-    const settings = {
+    const audiodbSettings = {
         async: true,
         crossDomain: true,
         url: `https://theaudiodb.p.rapidapi.com/searchtrack.php?s=${$searchInput.val()}&t=yellow`,
@@ -31,7 +31,7 @@ const getArtist = () => {
     });
 
     // Artist Info API
-    const settings = {
+    const artistInfoSettings = {
         async: true,
         crossDomain: true,
         url: `https://artist-info.p.rapidapi.com/getArtistInfo?Kostas=${$searchInput.val()}`,
@@ -47,14 +47,9 @@ const getArtist = () => {
     });
 };
 
-$btn.on('click', () => {getWeather()});
+$btn.on('click', () => {getArtist()});
 $searchInput.on('keypress', (e) => {
   if (e.which === 13) {
-    getWeather();
+    getArtist();
   };
-});
-
-$searchCol.on('click', '.searchHist', () => {
-  $searchInput.val($(this).text());
-  getWeather();
 });
