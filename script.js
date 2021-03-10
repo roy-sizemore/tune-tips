@@ -52,8 +52,6 @@ $(document).ready(() => {
         });
     };
 
-    const footer = () => {moment().format('YYYY')};
-
     // Button and Enter key functionality
     $btn.on('click', getArtist);
     $searchInput.on('keypress', (enter) => {
@@ -63,3 +61,10 @@ $(document).ready(() => {
     });
 });
 
+
+/* How to add an id to a jQuery statement:
+const sampleStatement = $('<div>').attr('id', 'id').addClass('first-class second-class');
+
+If the variable has already been declared:
+sampleStatement.attr('id', 'first-id second-id').addClass('first-class second-class);
+*/
