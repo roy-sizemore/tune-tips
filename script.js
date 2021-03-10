@@ -11,39 +11,46 @@ $(document).ready(() => {
 
     // Retrieve artist info and top 10 tracks 
     const getArtist = () => {
-        const $topTracks = $('<h2>').attr('id', 'h2').text(`Top 10 Tracks for:\n${$searchInput.val()}`);
-        const $artistInfo = $('<h2>').attr('id', 'h2').text(`Info about:\n${$searchInput.val()}`);
+
+        const $topTracks = $('<h2>').addClass('h2 text-capitalize search-input').text(`Top 10 Tracks for: ${$searchInput.val()}`);
+        const $artistInfo = $('<h3>').addClass('h2 text-capitalize search-input').text(`Info about: ${$searchInput.val()}`);
         const $contain2 = $('<div>').addClass('container container-fluid d-flex flex-row p-5');
         const $trackDiv = $('<div>').addClass('container-s col-4 p-5');
+        const $olTrack = $('<ol>');
         const $infoDiv = $('<div>').addClass('container-s col-4 p-5');
         $infoDiv.append($artistInfo);
         $trackDiv.append($topTracks);
+        $trackDiv.append($olTrack);
         $contain2.append($infoDiv, $trackDiv);
         $('body').append($contain2);
 
         // AudioDB API
         $.ajax({
             // Retrieves top 10 tracks
-            url: `theaudiodb.com/api/v1/json/{APIKEY}/track-top10.php?s=${$searchInput.val()}`,
+            url: `https://theaudiodb.com/api/v1/json/523532/track-top10.php?s=${$searchInput.val()}`,
             method: 'GET',
             success: (data) => {
-                console.log(data);
+                for (i = 0; i < data.track.length; i++) {
+                    console.log(data.track[i].strTrack);
+                    let li = $('<li>').text(data.track[i].strTrack);
+                    $olTrack.append(li);
+                };
             },
         });
 
         // Artist Info API
-        $.ajax({
-            // Retrieves artist information
-            url: `https://artist-info.p.rapidapi.com/getArtistInfo?Kostas=${$searchInput.val()}`,
-            method: "GET",
-            headers: {
-                "x-rapidapi-key": "3d0129d893msh65e57270d365ab7p1d1e20jsn134535a62282",
-                "x-rapidapi-host": "artist-info.p.rapidapi.com"
-            },
-            success: (data) => {
-                console.log(JSON.stringify(data));
-            }
-        });
+        // $.ajax({
+        //     // Retrieves artist information
+        //     url: `https://artist-info.p.rapidapi.com/getArtistInfo?Kostas=${$searchInput.val()}`,
+        //     method: "GET",
+        //     headers: {
+        //         "x-rapidapi-key": "3d0129d893msh65e57270d365ab7p1d1e20jsn134535a62282",
+        //         "x-rapidapi-host": "artist-info.p.rapidapi.com"
+        //     },
+        //     success: (response) => {
+        //         console.log(JSON.stringify(response));
+        //     }
+        // });
     };
 
     // Button and Enter key functionality
