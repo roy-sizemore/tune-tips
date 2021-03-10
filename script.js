@@ -8,9 +8,9 @@ $contain1.append($searchInput, $btn);
 $jumboDiv.append($h1, $contain1);
 $('body').append($jumboDiv);
 
-const showArtist = ($artist) => {
-    this.addClass('text-capitalize').text($searchInput.val());
-    $('body').append(this);
+const showArtist = () => {
+    $artist.addClass('text-capitalize').text($searchInput.val());
+    $('body').append($artist);
 };
 
 const getArtist = () => {
