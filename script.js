@@ -52,8 +52,6 @@ $(document).ready(() => {
         });
     };
 
-    const footer = () => {moment().format('YYYY')};
-
     // Button and Enter key functionality
     $btn.on('click', getArtist);
     $searchInput.on('keypress', (enter) => {
@@ -62,4 +60,5 @@ $(document).ready(() => {
         };
     });
 });
+
 
