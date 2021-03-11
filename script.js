@@ -7,7 +7,7 @@ $(document).ready(() => {
     const $searchInput = $('<input>').attr({type: 'text', placeholder: 'Enter Artist, ex: The Weekend'}).addClass('form-control aria-label text');
     $contain1.append($searchInput, $btn);
     $jumboDiv.append($h1, $contain1);
-    $('body').append($jumboDiv);
+    $('body').append($jumboDiv); // cut/paste out classes and/or ids you don't want to use and put them in comments off to the side
 
     // Retrieve artist info and top 10 tracks 
     const getArtist = () => {
