@@ -11,7 +11,7 @@ $(document).ready(() => {
 
     // Retrieve artist info and top 10 tracks 
     const getArtist = () => {
-
+        // Adds divs and Bootstrap to container/cards showing the artist's info and top tracks once the user inputs an artist
         const $topTracks = $('<h2>').addClass('text-capitalize search-input').text(`Top Tracks for: ${$searchInput.val()}`);
         const $artistInfo = $('<h2>').addClass('text-capitalize search-input').text(`Info about: ${$searchInput.val()}`);
         const $contain2 = $('<div>').addClass('container container-fluid d-flex flex-row p-5 m-5');
