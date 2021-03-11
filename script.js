@@ -1,13 +1,13 @@
 $(document).ready(() => {
     // Add divs and Bootstrap classes for Jumbotron, containers, search input, artist and the button and append to the body
-    const $jumboDiv = $('<div>').addClass('jumbotron jumbotron-fluid newJumbo');
+    const $jumboDiv = $('<div>').addClass('jumbotron jumbotron-fluid newJumbo'); // cut/paste out classes and/or ids you don't want to use and put them in comments off to the side
     const $contain1 = $('<div>').addClass('container container-fluid d-flex flex-row pl-5');
     const $h1 = $('<h1>').attr('id', 'h1').addClass('pb-3 pl-5').text('Welcome to Tune Tips!');
     const $btn = $('<button>').addClass('btn btn-dark flex-shrink-0 col-2').text('Search');
     const $searchInput = $('<input>').attr({type: 'text', placeholder: 'Enter Artist, ex: The Weekend'}).addClass('form-control aria-label text');
     $contain1.append($searchInput, $btn);
     $jumboDiv.append($h1, $contain1);
-    $('body').append($jumboDiv); // cut/paste out classes and/or ids you don't want to use and put them in comments off to the side
+    $('body').append($jumboDiv);
 
     // Retrieve artist info and top 10 tracks 
     const getArtist = () => {
