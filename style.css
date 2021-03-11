@@ -41,9 +41,9 @@ label {
 
 
 .tracks{
-    align-items: center;
-    margin-left: 350px;
+    align-items: center
 }
+
 
 
 .newJumbo {
@@ -98,7 +98,10 @@ label {
 [class*="col-"] {
     width: 100%;
 }
-  
+
+.contain2{
+    display: col
+}
 @media only screen and (min-width: 700px) {
   /* For desktop: */
   .col-1 {width: 8.33%;}
