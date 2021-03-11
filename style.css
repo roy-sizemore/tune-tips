@@ -72,29 +72,6 @@ label {
     flex-direction: row-reverse;
 }
 
-<<<<<<< HEAD
-
-.btn :hover {
-    color:blueviolet; 
-=======
-footer {
-    border-style: double;
-    padding-bottom:px;
-    font-size: 2px;
-    border-radius: 20px;
-    background-color: lightgray;
-    text-align: center;
-    font-style: oblique;
-    font-size: 10px;
-    box-shadow: 20px 20px 30px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height:30px;
-
-
->>>>>>> a39c534927733780b98f413c325b2d954df5ce8f
-}
 
 /* For desktop: */
 .col-1 {width: 8.33%;}
