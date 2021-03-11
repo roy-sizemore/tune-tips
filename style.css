@@ -27,7 +27,7 @@ label {
     background-color:lightgray;
     padding: 50px;
     display: flex;
-    flex-direction:column;
+    
     justify-content: space-evenly;
     align-items:center;
     text-align:center;
@@ -36,12 +36,24 @@ label {
     height: 400px;
     border-radius: 37px;
     box-shadow: 20px 30px 20px;
+    margin: 30px;
+    
     
 }
 
 
+.container{
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+   /* justify-content: center;*/
+
+}
+
+
 .tracks{
-    align-items: center
+    align-items: center;
+    
 }
 
 
@@ -89,9 +101,13 @@ label {
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  [class*="col-"] {
+  [class*="col-"]  {
     width: 100%;
-  }
+        flex: 100%;}
+
+    
+
+  
 }
 
 /* For mobile phones: */
@@ -100,7 +116,7 @@ label {
 }
 
 .contain2{
-    display: col
+
 }
 @media only screen and (min-width: 700px) {
   /* For desktop: */
