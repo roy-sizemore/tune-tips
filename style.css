@@ -56,7 +56,6 @@ label {
     align-content: center;
 }
 
-
 .giantContainer {
     display: flex;
     margin: auto;
@@ -66,11 +65,6 @@ label {
     padding-right: 3em;
     flex-shrink:initial;
     flex-direction: row-reverse;
-}
-
-
-.btn :hover {
-    color:blueviolet; 
 }
 
 footer {
