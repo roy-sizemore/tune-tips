@@ -17,7 +17,7 @@ $(document).ready(() => {
         const $contain2 = $('<div>').addClass('container container-fluid d-flex flex-row p-5 m-5');
         const $trackDiv = $('<div>').addClass('container-s col-4 flex-column align-items-center tracks');
         const $olTrack = $('<ol>');
-        const $infoDiv = $('<div>').addClass('container-s col-4   tracks');
+        const $infoDiv = $('<div>').addClass('container-s col-4 ');
         $infoDiv.append($artistInfo);
         $trackDiv.append($topTracks, $olTrack);
         $contain2.append($infoDiv, $trackDiv);
