@@ -15,7 +15,7 @@ $(document).ready(() => {
         const $topTracks = $('<h2>').addClass('text-capitalize search-input').text(`Top Tracks for: ${$searchInput.val()}`);
         const $artistInfo = $('<h2>').addClass('text-capitalize search-input').text(`Info about: ${$searchInput.val()}`);
         const $contain2 = $('<div>').addClass('container container-fluid d-flex flex-row p-5 m-5');
-        const $trackDiv = $('<div>').addClass('container-s col-4 flex-column   tracks');
+        const $trackDiv = $('<div>').addClass('container-s col-4 flex-column align-items-center tracks');
         const $olTrack = $('<ol>');
         const $infoDiv = $('<div>').addClass('container-s col-4   tracks');
         $infoDiv.append($artistInfo);
