@@ -1,6 +1,6 @@
 $(document).ready(() => {
     // Add divs and Bootstrap classes for Jumbotron, containers, search input, artist and the button and append to the body
-    const $jumboDiv = $('<div>').addClass('jumbotron jumbotron-fluid');
+    const $jumboDiv = $('<div>').addClass('jumbotron jumbotron-fluid newJumbo');
     const $contain1 = $('<div>').addClass('container container-fluid d-flex flex-row pl-5');
     const $h1 = $('<h1>').attr('id', 'h1').addClass('pb-3 pl-5').text('Welcome to Tune Tips!');
     const $btn = $('<button>').addClass('btn btn-dark flex-shrink-0 col-2').text('Search');
@@ -12,12 +12,12 @@ $(document).ready(() => {
     // Retrieve artist info and top 10 tracks 
     const getArtist = () => {
 
-        const $topTracks = $('<h2>').addClass('text-capitalize search-input').text(`Top Tracks for: ${$searchInput.val()}`);
+        const $topTracks = $('<h2>').addClass('text-capitalize search-input ').text(`Top Tracks for: ${$searchInput.val()}`);
         const $artistInfo = $('<h2>').addClass('text-capitalize search-input').text(`Info about: ${$searchInput.val()}`);
         const $contain2 = $('<div>').addClass('container container-fluid d-flex flex-row p-5 m-5');
-        const $trackDiv = $('<div>').addClass('container-s col-4 flex-column p-5 m-5');
+        const $trackDiv = $('<div>').addClass('container-s col-4 flex-column p-5 m-5  tracks');
         const $olTrack = $('<ol>');
-        const $infoDiv = $('<div>').addClass('container-s col-4 p-5 m-5');
+        const $infoDiv = $('<div>').addClass('container-s col-4 p-5 m-5  info');
         $infoDiv.append($artistInfo);
         $trackDiv.append($topTracks, $olTrack);
         $contain2.append($infoDiv, $trackDiv);
