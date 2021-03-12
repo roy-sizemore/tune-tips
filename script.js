@@ -15,9 +15,9 @@ $(document).ready(() => {
         const $topTracks = $('<h2>').addClass('text-capitalize search-input').text(`Top Tracks for: ${$searchInput.val()}`);
         const $artistInfo = $('<h2>').addClass('text-capitalize search-input').text(`Info about: ${$searchInput.val()}`);
         const $contain2 = $('<div>').addClass('container-fluid d-flex align-items-center');
-        const $trackDiv = $('<div>').addClass('container-s');
+        const $trackDiv = $('<div>').addClass('container-s container-fluid');
         const $olTrack = $('<ol>');
-        const $infoDiv = $('<div>').addClass('container-s');
+        const $infoDiv = $('<div>').addClass('container-s container-fluid');
         $infoDiv.append($artistInfo);
         $trackDiv.append($topTracks, $olTrack);
         $contain2.append($infoDiv, $trackDiv);
@@ -44,10 +44,10 @@ $(document).ready(() => {
         // last.fm API
         $.ajax({
             // Retrieves artist information
-            url: `http://ws.audioscrobbler.com/2.0//2.0/?method=artist.getinfo&artist=${$searchInput.val()}&api_key=c8fa358f2006de3b95aa7bf6026a6017&format=json`,
+            url: `https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${$searchInput.val()}&api_key=c8fa358f2006de3b95aa7bf6026a6017&format=json`,
             method: "GET",
             success: (response) => {
-                console.log(response);
+                $infoDiv.append(response.artist.bio.summary);
             }
         });
     };
