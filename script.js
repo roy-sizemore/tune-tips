@@ -44,7 +44,7 @@ $(document).ready(() => {
         // last.fm API
         $.ajax({
             // Retrieves artist information
-            url: `https://ws.audioscrobbler.com/2.0//2.0/?method=artist.getinfo&artist=${$searchInput.val()}&api_key=c8fa358f2006de3b95aa7bf6026a6017&format=json`,
+            url: `https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${$searchInput.val()}&api_key=c8fa358f2006de3b95aa7bf6026a6017&format=json`,
             method: "GET",
             success: (response) => {
                 $infoDiv.append(response.artist.bio.summary);
