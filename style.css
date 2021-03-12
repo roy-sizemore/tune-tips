@@ -1,7 +1,7 @@
 body {
     background-image: url("https://i.pinimg.com/originals/b2/eb/20/b2eb2040524e4d939041997bef200fc5.jpg");
-    background-size:cover;
-    image-resolution:inherit;
+    background-size: cover;
+    image-resolution: inherit;
     background-repeat: no-repeat;
     -webkit-transition: opacity 2s ease-in;
     -moz-transition: opacity 2s ease-in;
@@ -11,11 +11,9 @@ body {
     margin-bottom: 540px;
 }
 
-
 h1 {
-    color:lightcyan;
+    color: lightcyan;
     text-shadow: lightgray;
-    
 }
 
 .search-input {
@@ -23,23 +21,18 @@ h1 {
     margin-bottom: 1em;
 }
 
-label {
-    color:white;
-}
-
 .container-s {
-    background-color:lightgray;
+    background-color: lightgray;
     padding: 30px;
     justify-content: space-evenly;
-    align-items:center;
-    text-align:center;
-    border-style:ridge;
+    align-items: center;
+    text-align: center;
+    border-style: ridge;
     border-color: indigo;
     border-radius: 37px;
     box-shadow: 10px 10px 10px;
     margin: 30px;
 }
- 
   
 .newJumbo {
     background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-purple-minimalistic-glare-music-notes-banner-background-image_210610.jpg");
@@ -50,10 +43,6 @@ label {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-}
-
- .form-control {
-    align-content: center;
 }
 
 /* For desktop: */
@@ -73,16 +62,12 @@ label {
   /* For mobile phones: */
   [class*="col-"]  {
     width: 100%;
-    flex: 100%;}
+    flex: 100%;
+}
 
 .d-flex {
     flex-direction: column;
-}
-
-  
-}
-
-
+}}
 
 /* For mobile phones: */
 [class*="col-"] {

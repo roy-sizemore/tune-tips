@@ -2,15 +2,18 @@ $(document).ready(() => {
     // Add divs and Bootstrap classes for Jumbotron, containers, search input, artist and the button and append to the body
     const $jumboDiv = $('<div>').addClass('jumbotron jumbotron-fluid newJumbo'); // cut/paste out classes and/or ids you don't want to use and put them in comments off to the side
     const $contain1 = $('<div>').addClass('container-fluid d-flex align-items-center');
-    const $h1 = $('<h1>').attr('id', 'h1').addClass('pb-3 pl-5').text('Welcome to Tune Tips!');
+    const $h1 = $('<h1>').attr('id', 'h1').addClass('pb-3 text-center').text('Welcome to Tune Tips!');
     const $btn = $('<button>').addClass('btn btn-dark flex-shrink-0 col-2').text('Search');
     const $searchInput = $('<input>').attr({type: 'text', placeholder: 'Enter Artist, ex: The Weekend'}).addClass('form-control aria-label text');
     $contain1.append($searchInput, $btn);
     $jumboDiv.append($h1, $contain1);
     $('body').append($jumboDiv);
 
-    // Retrieve artist info and top 10 tracks 
+    // Retrieve artist info and top 10 tracks. Adds a container div and two divs, one for the artist bio and one for the top tracks. Top tracks are displayed in an ordered list. divs are then appended to the body
     const getArtist = () => {
+        // Leave function if $searchInput.val() is empty, ex: user just presses the Enter key or clicks Search
+        if (!$searchInput.val()) return;
+
         // Adds divs and Bootstrap to container/cards showing the artist's info and top tracks once the user inputs an artist
         const $topTracks = $('<h2>').addClass('text-capitalize search-input').text(`Top Tracks for: ${$searchInput.val()}`);
         const $artistInfo = $('<h2>').addClass('text-capitalize search-input').text(`Info about: ${$searchInput.val()}`);
@@ -29,15 +32,9 @@ $(document).ready(() => {
             url: `https://theaudiodb.com/api/v1/json/523532/track-top10.php?s=${$searchInput.val()}`,
             method: 'GET',
             success: (data) => {
-                if (data.track.length === 0) {
-                    $trackDiv.remove($olTrack);
-                    const $zeroText = $('<p>').text("Ain't no luv for this artist, man.");
-                    $trackDiv.append($zeroText);
-                } else {
                     for (i = 0; i < data.track.length; i++) {
                         $olTrack.append($('<li>').text(data.track[i].strTrack));
                     };
-                };
             },
         });
 
@@ -50,6 +47,7 @@ $(document).ready(() => {
                 $infoDiv.append(response.artist.bio.summary);
             }
         });
+        $searchInput.val('');
     };
 
     // Button and Enter key functionality
