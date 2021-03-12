@@ -42,11 +42,10 @@ label {
 }
 
 
-.container{
+.container container-fluid{
     flex-direction: column;
     display: flex;
     flex-wrap: wrap;
-   /* justify-content: center;*/
 
 }
 
