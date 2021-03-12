@@ -56,7 +56,7 @@ $(document).ready(() => {
         // Checks localStorage to see if the artist has been searched before. If not already in localStorage, sets artist in localStorage. Makes each artist a clickable button that runs the getArtist function again for that artist (see below)
         if (!($searchInput.val() in localStorage)) {
             localStorage.setItem($searchInput.val(), $searchInput.val());
-            $searchRow.append($('<button>').attr('id', $searchInput.val()).addClass('w-100 searchHist').text($searchInput.val()));
+            $searchRow.append($('<button>').attr('id', $searchInput.val()).addClass('btn btn-light w-100 searchHist').text($searchInput.val()));
         };
 
         // Clears form input field
