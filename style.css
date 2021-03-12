@@ -53,17 +53,6 @@ label {
     align-content: center;
 }
 
-.giantContainer {
-    display: flex;
-    margin: auto;
-    text-align: center;
-    padding-top: 77px;
-    padding-left: 2em;
-    padding-right: 3em;
-    flex-shrink:initial;
-    flex-direction: row-reverse;
-}
-
 /* For desktop: */
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
