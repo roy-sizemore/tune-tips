@@ -1,5 +1,5 @@
 body {
-    background-image: url("https://i.pinimg.com/originals/b2/eb/20/b2eb2040524e4d939041997bef200fc5.jpg");
+    background-image: url("./img/b2eb2040524e4d939041997bef200fc5.jpg");
     background-size: cover;
     image-resolution: inherit;
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@ h1 {
 }
   
 .newJumbo {
-    background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-purple-minimalistic-glare-music-notes-banner-background-image_210610.jpg");
+    background-image: url("./img/t-t-mini-glare-back-image_21.jpg");
     background-position: center; 
     image-rendering: optimizeQuality;
     display: flexbox;
