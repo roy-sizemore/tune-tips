@@ -1,4 +1,5 @@
 body {
+    /* img used with permission: https://nicewallpaper.netlify.app/pages/copyright */
     background-image: url("./img/b2eb2040524e4d939041997bef200fc5.jpg");
     background-size: cover;
     image-resolution: inherit;
@@ -35,6 +36,7 @@ h1 {
 }
   
 .newJumbo {
+    /* img used with permission: https://pngtree.com/copyright-notice */
     background-image: url("./img/t-t-mini-glare-back-image_21.jpg");
     background-position: center; 
     image-rendering: optimizeQuality;
