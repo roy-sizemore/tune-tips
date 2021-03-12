@@ -27,7 +27,6 @@ label {
     background-color:lightgray;
     padding: 50px;
     display: flex;
-    
     justify-content: space-evenly;
     align-items:center;
     text-align:center;
@@ -38,11 +37,6 @@ label {
     box-shadow: 20px 30px 20px;
     margin: 30px;
     
-    
-}
-
-.tracks{
-    align-items: center;
     
 }
 
