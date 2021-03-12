@@ -15,6 +15,17 @@ h1 {
     color: lightcyan;
     text-shadow: lightgray;
 }
+  
+.newJumbo {
+    /* img used with permission: https://pngtree.com/copyright-notice */
+    background-image: url("./img/t-t-mini-glare-back-image_21.jpg");
+    background-position: center;
+    image-rendering: optimizeQuality;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
 
 .container-s {
     background-color: lightgray;
@@ -28,16 +39,11 @@ h1 {
     box-shadow: 10px 10px 10px;
     margin: 30px;
 }
-  
-.newJumbo {
-    /* img used with permission: https://pngtree.com/copyright-notice */
-    background-image: url("./img/t-t-mini-glare-back-image_21.jpg");
-    background-position: center; 
-    image-rendering: optimizeQuality;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+
+.searchHist {
+    padding: 10px;
+    margin: 5px 5px 0px 0px;
+    border: 1px solid grey;
 }
 
 /* For desktop: */
