@@ -49,6 +49,8 @@ $(document).ready(() => {
                 $infoDiv.append(response.artist.bio.summary);
             }
         });
+
+        // Clear form input field
         $searchInput.val('');
     };
 
