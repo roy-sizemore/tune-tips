@@ -41,22 +41,10 @@ label {
     
 }
 
-
-.container{
-    flex-direction: column;
-    display: flex;
-    flex-wrap: wrap;
-   /* justify-content: center;*/
-
-}
-
-
 .tracks{
     align-items: center;
     
 }
-
-
 
 .newJumbo {
     background-image: url("Music-visualizer-tune-tips.jpg");
