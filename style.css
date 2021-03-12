@@ -1,11 +1,15 @@
 body {
-    background-color: gray;
+    background-image: url("https://i.pinimg.com/originals/b2/eb/20/b2eb2040524e4d939041997bef200fc5.jpg");
+    background-size:cover;
+    image-resolution:inherit;
+    background-repeat: no-repeat;
     -webkit-transition: opacity 2s ease-in;
     -moz-transition: opacity 2s ease-in;
     -o-transition: opacity 2s ease-in;
     -ms-transition: opacity 2s ease-in;
     transition: opacity 2s ease-in;
 }
+
 
 h1 {
     color:lightcyan;
@@ -31,12 +35,13 @@ label {
     border-style:ridge;
     border-color: indigo;
     border-radius: 37px;
-    box-shadow: 20px 30px 20px;
+    box-shadow: 10px 10px 10px;
     margin: 30px;
 }
-
+ 
+  
 .newJumbo {
-    background-image: url("Music-visualizer-tune-tips.jpg");
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-purple-minimalistic-glare-music-notes-banner-background-image_210610.jpg");
     background-position: center; 
     image-rendering: optimizeQuality;
     display: flexbox;

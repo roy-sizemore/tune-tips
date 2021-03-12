@@ -15,9 +15,9 @@ $(document).ready(() => {
         const $topTracks = $('<h2>').addClass('text-capitalize search-input').text(`Top Tracks for: ${$searchInput.val()}`);
         const $artistInfo = $('<h2>').addClass('text-capitalize search-input').text(`Info about: ${$searchInput.val()}`);
         const $contain2 = $('<div>').addClass('container-fluid d-flex align-items-center');
-        const $trackDiv = $('<div>').addClass('container-s container-fluid');
+        const $trackDiv = $('<div>').addClass('container-s container-fluid fade-in tracks');
         const $olTrack = $('<ol>');
-        const $infoDiv = $('<div>').addClass('container-s container-fluid');
+        const $infoDiv = $('<div>').addClass('container-s container-fluid fade-in tracks');
         $infoDiv.append($artistInfo);
         $trackDiv.append($topTracks, $olTrack);
         $contain2.append($infoDiv, $trackDiv);
