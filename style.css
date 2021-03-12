@@ -15,7 +15,7 @@ h1 {
 
 .search-input {
     text-align: center;
-    margin-bottom: 1.75em;
+    margin-bottom: 1em;
 }
 
 label {
@@ -23,21 +23,16 @@ label {
 }
 
 .container-s {
-    width:400px;
     background-color:lightgray;
-    padding: 50px;
-    display: flex;
+    padding: 30px;
     justify-content: space-evenly;
     align-items:center;
     text-align:center;
     border-style:ridge;
     border-color: indigo;
-    height: 400px;
     border-radius: 37px;
     box-shadow: 20px 30px 20px;
     margin: 30px;
-    
-    
 }
 
 
@@ -77,7 +72,6 @@ label {
 .col-3 {width: 25%;}
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
 .col-7 {width: 58.33%;}
 .col-8 {width: 66.66%;}
 .col-9 {width: 75%;}
@@ -89,21 +83,22 @@ label {
   /* For mobile phones: */
   [class*="col-"]  {
     width: 100%;
-        flex: 100%;}
+    flex: 100%;}
 
-    
+.d-flex {
+    flex-direction: column;
+}
 
   
 }
+
+
 
 /* For mobile phones: */
 [class*="col-"] {
     width: 100%;
 }
 
-.contain2{
-
-}
 @media only screen and (min-width: 700px) {
   /* For desktop: */
   .col-1 {width: 8.33%;}
@@ -111,7 +106,6 @@ label {
   .col-3 {width: 25%;}
   .col-4 {width: 33.33%;}
   .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
   .col-7 {width: 58.33%;}
   .col-8 {width: 66.66%;}
   .col-9 {width: 75%;}
