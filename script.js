@@ -3,8 +3,10 @@ $(document).ready(() => {
     const $jumboDiv = $('<div>').addClass('jumbotron jumbotron-fluid newJumbo'); // cut/paste out classes and/or ids you don't want to use and put them in comments off to the side
     const $contain1 = $('<div>').addClass('container-fluid d-flex align-items-center');
     const $h1 = $('<h1>').attr('id', 'h1').addClass('pb-3 text-center').text('Welcome to Tune Tips!');
-    const $btn = $('<button>').addClass('btn btn-dark flex-shrink-0 col-2').text('Search');
+    const $btn = $('<button>').addClass('btn btn-dark flex-shrink-0 col-2');
+    const $btnIcon = $('<i>').addClass('fas fa-search');
     const $searchInput = $('<input>').attr({type: 'text', placeholder: 'Enter Artist, ex: The Weekend'}).addClass('form-control aria-label text');
+    $btn.append($btnIcon);
     $contain1.append($searchInput, $btn);
     $jumboDiv.append($h1, $contain1);
     $('body').append($jumboDiv);
@@ -15,12 +17,12 @@ $(document).ready(() => {
         if (!$searchInput.val()) return;
 
         // Adds divs and Bootstrap to container/cards showing the artist's info and top tracks once the user inputs an artist
-        const $topTracks = $('<h2>').addClass('text-capitalize search-input').text(`Top Tracks for: ${$searchInput.val()}`);
-        const $artistInfo = $('<h2>').addClass('text-capitalize search-input').text(`Info about: ${$searchInput.val()}`);
-        const $contain2 = $('<div>').addClass('container-fluid d-flex align-items-center');
-        const $trackDiv = $('<div>').addClass('container-s container-fluid fade-in tracks');
+        const $topTracks = $('<h2>').addClass('text-capitalize search-input text-center pb-2').text(`Top Tracks for: ${$searchInput.val()}`);
+        const $artistInfo = $('<h2>').addClass('text-capitalize search-input text-center pb-2').text(`Info about: ${$searchInput.val()}`);
+        const $contain2 = $('<div>').attr('id', 'cont-2').addClass('container-fluid d-flex align-items-center');
+        const $trackDiv = $('<div>').addClass('container-s container container-fluid fade-in tracks');
         const $olTrack = $('<ol>');
-        const $infoDiv = $('<div>').addClass('container-s container-fluid fade-in tracks');
+        const $infoDiv = $('<div>').addClass('container-s container container-fluid fade-in tracks');
         $infoDiv.append($artistInfo);
         $trackDiv.append($topTracks, $olTrack);
         $contain2.append($infoDiv, $trackDiv);
@@ -47,6 +49,8 @@ $(document).ready(() => {
                 $infoDiv.append(response.artist.bio.summary);
             }
         });
+
+        // Clear form input field
         $searchInput.val('');
     };
 

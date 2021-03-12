@@ -9,17 +9,11 @@ body {
     -o-transition: opacity 2s ease-in;
     -ms-transition: opacity 2s ease-in;
     transition: opacity 2s ease-in;
-    margin-bottom: 540px;
 }
 
 h1 {
     color: lightcyan;
     text-shadow: lightgray;
-}
-
-.search-input {
-    text-align: center;
-    margin-bottom: 1em;
 }
 
 .container-s {
@@ -40,7 +34,6 @@ h1 {
     background-image: url("./img/t-t-mini-glare-back-image_21.jpg");
     background-position: center; 
     image-rendering: optimizeQuality;
-    display: flexbox;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -67,7 +60,7 @@ h1 {
     flex: 100%;
 }
 
-.d-flex {
+#cont-2 {
     flex-direction: column;
 }}
 
