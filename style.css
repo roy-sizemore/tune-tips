@@ -36,8 +36,6 @@ label {
     border-radius: 37px;
     box-shadow: 20px 30px 20px;
     margin: 30px;
-    
-    
 }
 
 .newJumbo {
@@ -45,7 +43,7 @@ label {
     background-position: center; 
     image-rendering: optimizeQuality;
     display: flexbox;
-    
+    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -66,7 +64,6 @@ label {
     flex-direction: row-reverse;
 }
 
-
 /* For desktop: */
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -86,10 +83,6 @@ label {
   [class*="col-"]  {
     width: 100%;
         flex: 100%;}
-
-    
-
-  
 }
 
 /* For mobile phones: */
@@ -97,9 +90,6 @@ label {
     width: 100%;
 }
 
-.contain2{
-
-}
 @media only screen and (min-width: 700px) {
   /* For desktop: */
   .col-1 {width: 8.33%;}
