@@ -23,7 +23,7 @@ $(() => {
     const keyNames = Object.keys(localStorage)
     for (art in keyNames) {
         let artNm = keyNames[art]
-        $searchRow.append($('<button>').addClass('searchHist').text(artNm).on('click', () => {
+        $searchRow.append($('<button>').addClass('btn btn-light searchHist').text(artNm).on('click', () => {
             $searchInput.val(artNm);
             getArtist();
             $searchInput.val('');
