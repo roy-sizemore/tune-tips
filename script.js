@@ -44,7 +44,7 @@ const getArtist = (artistName) => {
         method: 'GET',
         success: (data) => {
             for (i = 0; i < data.track.length; i++) {
-                $olTrack.append($('<li>').addClass('orb-text').text(data.track[i].strTrack));
+                $olTrack.append($('<li>').addClass('taj-text').text(data.track[i].strTrack));
             };
         }
     });
@@ -56,7 +56,7 @@ const getArtist = (artistName) => {
         method: "GET",
         success: (response) => {
             // Slices last.fm link from artist info
-            $infoDiv.append(response.artist.bio.summary.slice(0, -24));
+            $infoDiv.addClass('taj-text').append(response.artist.bio.summary.slice(0, -24));
         }
         // Set artist name in localStorage and append a button with the artist's name to $searchRow. New button can then be clicked and the search will run again
     }).then((response) => {
