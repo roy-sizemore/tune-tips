@@ -20,15 +20,16 @@ $jumboDiv.append($h1, $contain1, $searchRow);
 $('body').append($jumboDiv);
 
 // Retrieve artist info and top 10 tracks. Adds a container div and two divs, one for the artist bio and one for the top tracks. Top tracks are displayed in an ordered list. divs are then appended to the body
-const getArtist = () => {
+const getArtist = (artistName) => {
     $olTrack.text(" ");
     $infoDiv.text(" ");
     // Returns out of function if $searchInput.val() is empty, ex: user just presses the Enter key or clicks Search
     if (!$searchInput.val()) return;
+    console.log(artistName);
 
     // Adds divs, Bootstrap and custom CSS to container/cards showing the artist's info and top tracks once the user inputs an artist
-    $topTracks.addClass('text-capitalize search-input text-center pb-2').text(`Top Tracks for: ${$searchInput.val()}`);
-    $artistInfo.addClass('text-capitalize search-input text-center pb-2').text(`Info about: ${$searchInput.val()}`);
+    $topTracks.addClass('text-capitalize search-input text-center pb-2').text(`Top Tracks for: ${artistName ? artistName : $searchInput.val()}`);
+    $artistInfo.addClass('text-capitalize search-input text-center pb-2').text(`Info about: ${artistName ? artistName : $searchInput.val()}`);
     
     $jumboDiv.append($searchRow);
     $infoDiv.append($artistInfo);
@@ -57,17 +58,15 @@ const getArtist = () => {
             // Slices last.fm link from artist info
             $infoDiv.append(response.artist.bio.summary.slice(0, -24));
         }
+        // Set artist name in localStorage and append a button with the artist's name to $searchRow. New button can then be clicked and the search will run again
     }).then((response) => {
         if (!(response.artist.name in localStorage)) {
-            console.log(response.artist.name)
             localStorage.setItem(response.artist.name, response.artist.name);
-            $searchRow.append($('<button>').addClass('searchHist').text(response.artist.name));
-            $('.searchHist').on('click', () => {
+            $searchRow.append($('<button>').addClass('btn btn-light searchHist').text(response.artist.name).on('click', () => {
                 $searchInput.val(response.artist.name);
-                getArtist();
+                getArtist(response.artist.name);
                 $searchInput.val('');
-            });
-            $searchInput.val('');
+            }));
         };
     });
 
@@ -84,14 +83,3 @@ $searchInput.on('keypress', (enter) => {
     };
 });
 
-// $('.searchHist').on('click', () => {
-//     $searchInput.val($(this).text());
-//     getArtist();
-// });
-
-    
-    // // Checks localStorage to see if the artist has been searched before. If not already in localStorage, sets artist in localStorage. Makes each artist a clickable button that runs the getArtist function again for that artist (see below)
-    // if (!($searchInput.val() in localStorage)) {
-    //     localStorage.setItem($searchInput.val(), $searchInput.val());
-    //     $searchRow.append($('<button>').addClass('btn btn-light w-100 searchHist').text($searchInput.val()));
-    // };
