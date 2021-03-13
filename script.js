@@ -50,19 +50,25 @@ const getArtist = () => {
             // Slices last.fm link from artist info
             $infoDiv.append(response.artist.bio.summary.slice(0, -24));
         }
+    }).then((response) => {
+        if (!(response.artist.name in localStorage)) {
+            console.log(response.artist.name)
+            localStorage.setItem(response.artist.name, response.artist.name);
+            $searchRow.append($('<button>').addClass('searchHist').text(response.artist.name));
+            $('.searchHist').on('click', () => {
+                $searchInput.val(response.artist.name);
+                getArtist();
+                $searchInput.val('');
+            });
+            $searchInput.val('');
+        };
     });
-
-    // Checks localStorage to see if the artist has been searched before. If not already in localStorage, sets artist in localStorage. Makes each artist a clickable button that runs the getArtist function again for that artist (see below)
-    if (!($searchInput.val() in localStorage)) {
-        localStorage.setItem($searchInput.val(), $searchInput.val());
-        $searchRow.append($('<button>').attr('id', $searchInput.val()).addClass('btn btn-light w-100 searchHist').text($searchInput.val()));
-    };
 
     // Clears form input field
     $searchInput.val('');
 };
 
-// Adds click button/search history button and Enter keypress functionality to run getArtist function after user input/activity
+// Adds click button/search history button(s) and Enter keypress functionality to run getArtist function after user input/activity
 $btn.on('click', getArtist);
 
 $searchInput.on('keypress', (enter) => {
@@ -71,8 +77,14 @@ $searchInput.on('keypress', (enter) => {
     };
 });
 
-$('.searchHist').on('click', () => {
-    $searchInput.val($(this).text());
-    getArtist();
-});
+// $('.searchHist').on('click', () => {
+//     $searchInput.val($(this).text());
+//     getArtist();
+// });
 
+    
+    // // Checks localStorage to see if the artist has been searched before. If not already in localStorage, sets artist in localStorage. Makes each artist a clickable button that runs the getArtist function again for that artist (see below)
+    // if (!($searchInput.val() in localStorage)) {
+    //     localStorage.setItem($searchInput.val(), $searchInput.val());
+    //     $searchRow.append($('<button>').addClass('btn btn-light w-100 searchHist').text($searchInput.val()));
+    // };
