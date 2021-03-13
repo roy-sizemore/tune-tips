@@ -1,4 +1,4 @@
-// Add divs, Bootstrap, fontawesom search icon and custom CSS for Jumbotron, containers, search input and the button and append to the body
+// Add divs, Bootstrap, fontawesome search icon and custom CSS for Jumbotron, containers, search input and the button and append to the body
 const $jumboDiv = $('<div>').addClass('jumbotron jumbotron-fluid newJumbo');
 const $contain1 = $('<div>').addClass('container-fluid d-flex align-items-center');
 const $h1 = $('<h1>').attr('id', 'h1').addClass('pb-3 text-center').text('Welcome to Tune Tips!');
