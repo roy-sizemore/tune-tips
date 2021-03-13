@@ -50,10 +50,9 @@ const getArtist = () => {
             // Slices last.fm link from artist info
             $infoDiv.append(response.artist.bio.summary.slice(0, -24));
         }
-        // Set artist name in localStorage and appends a button with the artist's name to $searchRow. New button can then be clicked
+        // Set artist name in localStorage and append a button with the artist's name to $searchRow. New button can then be clicked and the search will run again
     }).then((response) => {
         if (!(response.artist.name in localStorage)) {
-            console.log(response.artist.name)
             localStorage.setItem(response.artist.name, response.artist.name);
             $searchRow.append($('<button>').addClass('btn btn-light searchHist').text(response.artist.name));
             $('.searchHist').on('click', () => {
