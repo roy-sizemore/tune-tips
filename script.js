@@ -50,11 +50,12 @@ const getArtist = () => {
             // Slices last.fm link from artist info
             $infoDiv.append(response.artist.bio.summary.slice(0, -24));
         }
+        // Set artist name in localStorage and appends a button with the artist's name to $searchRow. New button can then be clicked
     }).then((response) => {
         if (!(response.artist.name in localStorage)) {
             console.log(response.artist.name)
             localStorage.setItem(response.artist.name, response.artist.name);
-            $searchRow.append($('<button>').addClass('searchHist').text(response.artist.name));
+            $searchRow.append($('<button>').addClass('btn btn-light searchHist').text(response.artist.name));
             $('.searchHist').on('click', () => {
                 $searchInput.val(response.artist.name);
                 getArtist();
@@ -77,14 +78,3 @@ $searchInput.on('keypress', (enter) => {
     };
 });
 
-// $('.searchHist').on('click', () => {
-//     $searchInput.val($(this).text());
-//     getArtist();
-// });
-
-    
-    // // Checks localStorage to see if the artist has been searched before. If not already in localStorage, sets artist in localStorage. Makes each artist a clickable button that runs the getArtist function again for that artist (see below)
-    // if (!($searchInput.val() in localStorage)) {
-    //     localStorage.setItem($searchInput.val(), $searchInput.val());
-    //     $searchRow.append($('<button>').addClass('btn btn-light w-100 searchHist').text($searchInput.val()));
-    // };
