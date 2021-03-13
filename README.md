@@ -16,7 +16,7 @@ Use this Application to pull down top tacks and a bio for any Artists entered by
 
 ### Visuals
 
-![Tune Tips Final](https://user-images.githubusercontent.com/77699769/111025314-4da45f00-83b1-11eb-9353-17ee48548832.PNG))
+![Tune Tips Final](https://user-images.githubusercontent.com/77699769/111025314-4da45f00-83b1-11eb-9353-17ee48548832.PNG)
 
 
 ### Links
