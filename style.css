@@ -9,6 +9,8 @@ body {
     -o-transition: opacity 2s ease-in;
     -ms-transition: opacity 2s ease-in;
     transition: opacity 2s ease-in;
+    background-position: center;
+    margin-bottom: 974px;
 }
 
 h1 {
