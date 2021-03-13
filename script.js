@@ -18,17 +18,6 @@ $contain1.append($searchInput, $btn);
 $jumboDiv.append($h1, $contain1, $searchRow);
 $('body').append($jumboDiv);
 
-// Check localStorage for any pre-existing items and add them as clickable search history buttons
-if (localStorage.getItem()) {
-    for (i in localStorage) {
-    localStorage.getItem();
-        $searchRow.append($('<button>').addClass('btn btn-light searchHist').text(i.key).on('click', () => {
-            $searchInput.val();
-            getArtist();
-        }));
-    };
-};
-
 // Retrieve artist info and top 10 tracks. Adds a container div and two divs, one for the artist bio and one for the top tracks. Top tracks are displayed in an ordered list. divs are then appended to the body
 const getArtist = (artistName) => {
     // Clears divs of any data
