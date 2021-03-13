@@ -6,7 +6,6 @@ const $btn = $('<button>').addClass('btn btn-dark flex-shrink-0 col-2');
 const $btnIcon = $('<i>').addClass('fas fa-search');
 const $searchInput = $('<input>').attr({type: 'text', placeholder: 'Enter Artist, ex: Michael Jackson'}).addClass('form-control aria-label text');
 const $searchRow = $('<div>').addClass('container container-fluid d-flex flex-row float-left w-25');
-
 const $topTracks = $('<h2>');
 const $artistInfo = $('<h2>');
 const $contain2 = $('<div>').attr('id', 'cont-2').addClass('container-fluid d-flex align-items-center');
@@ -83,3 +82,4 @@ $searchInput.on('keypress', (enter) => {
     };
 });
 
+ 
