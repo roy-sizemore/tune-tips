@@ -13,9 +13,18 @@ body {
     margin-bottom: 974px;
 }
 
-h1 {
+#h1 {
     color: lightcyan;
     text-shadow: lightgray;
+    font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+}
+
+.h2-font {
+    font-family: 'New Rocker', Arial, Helvetica, sans-serif;
+}
+
+.orb-text {
+    font-family: 'Orbitron', Arial, Helvetica, sans-serif;
 }
   
 .newJumbo {
