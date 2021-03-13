@@ -7,23 +7,34 @@ $(document).ready(() => {
     const $btnIcon = $('<i>').addClass('fas fa-search');
     const $searchInput = $('<input>').attr({type: 'text', placeholder: 'Enter Artist, ex: Michael Jackson'}).addClass('form-control aria-label text');
     const $searchRow = $('<div>').addClass('container container-fluid d-flex flex-row float-left w-25');
+
+    const $topTracks = $('<h2>');
+    const $artistInfo = $('<h2>');
+    const $contain2 = $('<div>');
+    const $trackDiv = $('<div>');
+    const $olTrack = $('<ol>');
+    const $infoDiv = $('<div>').addClass('container-s container container-fluid fade-in tracks text-justify');
+
     $btn.append($btnIcon);
     $contain1.append($searchInput, $btn);
     $jumboDiv.append($h1, $contain1);
     $('body').append($jumboDiv);
 
     // Retrieve artist info and top 10 tracks. Adds a container div and two divs, one for the artist bio and one for the top tracks. Top tracks are displayed in an ordered list. divs are then appended to the body
-    const getArtist = () => {
+    getArtist = () => {
+        console.log("work");
+        $infoDiv.text(" ");
+        $olTrack.text(" ");
         // Returns out of function if $searchInput.val() is empty, ex: user just presses the Enter key or clicks Search
         if (!$searchInput.val()) return;
 
         // Adds divs, Bootstrap and custom CSS to container/cards showing the artist's info and top tracks once the user inputs an artist
-        const $topTracks = $('<h2>').addClass('text-capitalize search-input text-center pb-2').text(`Top Tracks for: ${$searchInput.val()}`);
-        const $artistInfo = $('<h2>').addClass('text-capitalize search-input text-center pb-2').text(`Info about: ${$searchInput.val()}`);
-        const $contain2 = $('<div>').attr('id', 'cont-2').addClass('container-fluid d-flex align-items-center');
-        const $trackDiv = $('<div>').addClass('container-s container container-fluid fade-in tracks');
-        const $olTrack = $('<ol>');
-        const $infoDiv = $('<div>').addClass('container-s container container-fluid fade-in tracks text-justify');
+        $topTracks.addClass('text-capitalize search-input text-center pb-2').text(`Top Tracks for: ${$searchInput.val()}`);
+        $artistInfo.addClass('text-capitalize search-input text-center pb-2').text(`Info about: ${$searchInput.val()}`);
+        $contain2.attr('id', 'cont-2').addClass('container-fluid d-flex align-items-center');
+        $trackDiv.addClass('container-s container container-fluid fade-in tracks');
+        
+        
         $jumboDiv.append($searchRow);
         $infoDiv.append($artistInfo);
         $trackDiv.append($topTracks, $olTrack);
@@ -39,6 +50,7 @@ $(document).ready(() => {
                 for (i = 0; i < data.track.length; i++) {
                     $olTrack.append($('<li>').text(data.track[i].strTrack));
                 };
+                $trackDiv.append($topTracks, $olTrack);
             }
         });
 
@@ -74,6 +86,7 @@ $(document).ready(() => {
 
     $searchRow.on('click', '.searchHist', () => {
         $searchInput.val($(this).text());
+        
         getArtist();
       });
 });
