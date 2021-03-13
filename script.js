@@ -18,7 +18,7 @@ $contain1.append($searchInput, $btn);
 $jumboDiv.append($h1, $contain1, $searchRow);
 $('body').append($jumboDiv);
 
-// Checks for items in localStorage and adds them to the search history as clickable buttons in $searchRow to enable persistent functionality
+// Runs on page load. Checks for items in localStorage and adds them to the search history as clickable buttons in $searchRow to enable persistent functionality
 $(() => {
     const keyNames = Object.keys(localStorage)
     for (art in keyNames) {
