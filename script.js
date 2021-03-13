@@ -28,8 +28,8 @@ const getArtist = (artistName) => {
     console.log(artistName);
 
     // Adds divs, Bootstrap and custom CSS to container/cards showing the artist's info and top tracks once the user inputs an artist
-    $topTracks.addClass('text-capitalize search-input text-center pb-2').text(`Top Tracks for: ${artistName ? artistName : $searchInput.val()}`);
-    $artistInfo.addClass('text-capitalize search-input text-center pb-2').text(`Info about: ${artistName ? artistName : $searchInput.val()}`);
+    $topTracks.addClass('text-capitalize search-input text-center pb-2 h2-font').text(`Top Tracks for: ${artistName ? artistName : $searchInput.val()}`);
+    $artistInfo.addClass('text-capitalize search-input text-center pb-2 h2-font').text(`Info about: ${artistName ? artistName : $searchInput.val()}`);
     
     $jumboDiv.append($searchRow);
     $infoDiv.append($artistInfo);
@@ -44,7 +44,7 @@ const getArtist = (artistName) => {
         method: 'GET',
         success: (data) => {
             for (i = 0; i < data.track.length; i++) {
-                $olTrack.append($('<li>').text(data.track[i].strTrack));
+                $olTrack.append($('<li>').addClass('orb-text').text(data.track[i].strTrack));
             };
         }
     });
