@@ -7,6 +7,8 @@ const $btnIcon = $('<i>').addClass('fas fa-search');
 const $searchInput = $('<input>').attr({type: 'text', placeholder: 'Enter Artist, ex: Michael Jackson'}).addClass('form-control aria-label text');
 const $searchRow = $('<div>').addClass('container container-fluid d-flex flex-row float-left w-25');
 const $contain2 = $('<div>').attr('id', 'cont-2').addClass('container-fluid d-flex align-items-center');
+const $artistInfo = $('<h2>');
+const $topTracks = $('<h2>');
 const $trackDiv = $('<div>').addClass('container-s container container-fluid fade-in tracks');
 const $olTrack = $('<ol>');
 const $infoDiv = $('<div>').addClass('container-s container container-fluid fade-in tracks text-justify');
@@ -26,8 +28,8 @@ const getArtist = (artistName) => {
     if (!$searchInput.val()) return;
 
     // Adds divs, Bootstrap and custom CSS to container/cards showing the artist's info and top tracks once the user inputs an artist
-    const $topTracks = $('<h2>').addClass('text-capitalize search-input text-center pb-2 h2-font').text(`Top Tracks for: ${artistName ? artistName : $searchInput.val()}`);
-    const $artistInfo = $('<h2>').addClass('text-capitalize search-input text-center pb-2 h2-font').text(`Info about: ${artistName ? artistName : $searchInput.val()}`);
+    $artistInfo.addClass('text-capitalize search-input text-center pb-2 h2-font').text(`Top Tracks for: ${artistName ? artistName : $searchInput.val()}`);
+    $topTracks.addClass('text-capitalize search-input text-center pb-2 h2-font').text(`Info about: ${artistName ? artistName : $searchInput.val()}`);
     
     $jumboDiv.append($searchRow);
     $infoDiv.append($artistInfo);
